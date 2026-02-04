@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS tokens CASCADE;
+
+CREATE TABLE tokens (
+    id SERIAL PRIMARY KEY NOT NULL,
+    user_id INTEGER,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    token_hash BYTEA NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW() NOT NULL,
+    updated_at TIMESTAMP NOT NULL,
+    expiry TIMESTAMP WITHOUT TIME ZONE NOT NULL
+);
