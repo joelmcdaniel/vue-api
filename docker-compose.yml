@@ -9,8 +9,8 @@ services:
       - "5432:5432"
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgresuser1
+      POSTGRES_PASSWORD: user1password
       POSTGRES_DB: vueapi
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql
